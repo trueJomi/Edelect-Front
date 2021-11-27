@@ -13,6 +13,7 @@ import { EditCarreraComponent } from './carrera/edit-carrera/edit-carrera.compon
 import { ListCarreraComponent } from './carrera/list-carrera/list-carrera.component';
 import { DeleteCarreraComponent } from './carrera/delete-carrera/delete-carrera.component';
 import { DeleteUniversitysComponent } from './universitys/delete-universitys/delete-universitys.component';
+import { MaterialModule } from '../material/material.module';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { DeleteUniversitysComponent } from './universitys/delete-universitys/del
   ],
   imports: [
     CommonModule,
-    AdminRoutingModule
+    AdminRoutingModule,
+    MaterialModule
   ]
 })
 export class AdminModule { }

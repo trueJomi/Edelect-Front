@@ -1,0 +1,30 @@
+.example-form {
+  min-width: 150px;
+  max-width: 300px;
+  width: 100%;
+  padding-bottom: 30px;
+  
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.contenedor {
+    min-width: 150px;
+    max-width: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.Separador {
+  padding-top: 40px;
+  margin-bottom: 30px;
+}
+
+.Separador h1 {
+  font-size: 35px;
+  font-weight: bold;
+}
