@@ -27,6 +27,8 @@
     "bootstrap": "^5.1.3",
     "jquery": "^3.6.0",
     "rxjs": "~7.4.0",
+    "semantic-ui-angular": "^0.3.0",
+    "semantic-ui-css": "^2.4.1",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
   },
