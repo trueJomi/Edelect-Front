@@ -1,1 +1,40 @@
-<p>register works!</p>
+<mat-card class="contenedor">
+    <div class="Separador">
+        <div>
+            <h1>Registrarse</h1>
+            <p>Llene el formulario para registrarse</p>
+        </div>
+        <fa-icon [icon]="faPencilAlt"></fa-icon>
+    </div>
+    <form>
+        <div class="example-form">
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Username</mat-label>
+                <input matInput placeholder="Username" type="text">
+            </mat-form-field>
+    
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Nombres</mat-label>
+                <input matInput placeholder="Nombre" type="text">
+            </mat-form-field>
+    
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Apellidos</mat-label>
+                <input matInput placeholder="Apellido" type="text">
+            </mat-form-field>
+    
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>E-mail</mat-label>
+                <input matInput placeholder="E-mail" type="email">
+            </mat-form-field>
+    
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Password</mat-label>
+                <input matInput placeholder="Password" type="password">
+            </mat-form-field>
+        </div>
+        <div class="Center">
+            <button mat-raised-button type="submit" color="primary">Registrarse</button>
+        </div>
+    </form>
+</mat-card>

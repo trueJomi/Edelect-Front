@@ -4,17 +4,23 @@
             <h1>Iniciar Sesión</h1>
             <p>Ingrese nombre de usuario y contraseña para iniciar sesión</p>
         </div>
-        <img src="" alt="">
+        <fa-icon [icon]="faKey"></fa-icon>
     </div>
-    <form class="example-form">
-        <mat-form-field class="example-full-width" appearance="fill">
-            <mat-label>Username</mat-label>
-            <input matInput placeholder="Username" type="text">
-        </mat-form-field>
 
-        <mat-form-field class="example-full-width" appearance="fill">
-            <mat-label>Password</mat-label>
-            <input matInput placeholder="password" type="password">
-        </mat-form-field>
+    <form>
+        <div class="example-form">
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Username</mat-label>
+                <input matInput placeholder="Username" type="text">
+            </mat-form-field>
+    
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Password</mat-label>
+                <input matInput placeholder="password" type="password">
+            </mat-form-field>
+        </div>
+        <div class="Center">
+            <button mat-raised-button type="submit" color="primary">Iniciar Sesion</button>
+        </div>
     </form>
 </mat-card>

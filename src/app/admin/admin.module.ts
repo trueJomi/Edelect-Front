@@ -14,6 +14,7 @@ import { ListCarreraComponent } from './carrera/list-carrera/list-carrera.compon
 import { DeleteCarreraComponent } from './carrera/delete-carrera/delete-carrera.component';
 import { DeleteUniversitysComponent } from './universitys/delete-universitys/delete-universitys.component';
 import { MaterialModule } from '../material/material.module';
+import { SugerenciasUniversityComponent } from './sugerencias-university/sugerencias-university.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { MaterialModule } from '../material/material.module';
     EditCarreraComponent,
     ListCarreraComponent,
     DeleteCarreraComponent,
-    DeleteUniversitysComponent
+    DeleteUniversitysComponent,
+    SugerenciasUniversityComponent
   ],
   imports: [
     CommonModule,

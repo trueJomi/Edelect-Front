@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { faKey } from '@fortawesome/free-solid-svg-icons'
+
 
 @Component({
   selector: 'app-found',
@@ -7,6 +9,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FoundComponent implements OnInit {
 
+  faKey= faKey;
+  
   constructor() { }
 
   ngOnInit(): void {

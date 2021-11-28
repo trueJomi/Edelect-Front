@@ -7,6 +7,9 @@ import { LayoutComponent } from './layout/layout.component';
 import { MaterialModule } from '../material/material.module';
 import { LoginComponent } from './layout/login/login.component';
 import { LogoutComponent } from './layout/logout/logout.component';
+import { ComentariosComponent } from './comentarios/comentarios.component';
+import { ArticleComponent } from './comentarios/article/article.component';
+import { SugerenciasUniversityComponent } from './sugerencias-university/sugerencias-university.component';
 
 
 @NgModule({
@@ -14,7 +17,10 @@ import { LogoutComponent } from './layout/logout/logout.component';
     IndexComponent,
     LayoutComponent,
     LoginComponent,
-    LogoutComponent
+    LogoutComponent,
+    ComentariosComponent,
+    ArticleComponent,
+    SugerenciasUniversityComponent
   ],
   imports: [
     CommonModule,

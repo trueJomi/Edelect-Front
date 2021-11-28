@@ -6,7 +6,8 @@ import { MaterialModule } from '../material/material.module';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { FoundComponent } from './found/found.component';
-
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { faPencilAlt } from '@fortawesome/free-solid-svg-icons'
 
 @NgModule({
   declarations: [
@@ -17,7 +18,11 @@ import { FoundComponent } from './found/found.component';
   imports: [
     CommonModule,
     AuthRoutingModule,
-    MaterialModule
+    MaterialModule,
+    FontAwesomeModule,
   ]
 })
-export class AuthModule { }
+export class AuthModule { 
+
+  faPencilAlt= faPencilAlt;
+}
