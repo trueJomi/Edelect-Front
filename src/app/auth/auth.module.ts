@@ -7,7 +7,6 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { FoundComponent } from './found/found.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faPencilAlt } from '@fortawesome/free-solid-svg-icons'
 
 @NgModule({
   declarations: [
@@ -24,5 +23,5 @@ import { faPencilAlt } from '@fortawesome/free-solid-svg-icons'
 })
 export class AuthModule { 
 
-  faPencilAlt= faPencilAlt;
+  
 }

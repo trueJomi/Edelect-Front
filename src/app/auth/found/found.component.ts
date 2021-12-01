@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { faKey } from '@fortawesome/free-solid-svg-icons'
+
 
 
 @Component({
@@ -9,8 +9,8 @@ import { faKey } from '@fortawesome/free-solid-svg-icons'
 })
 export class FoundComponent implements OnInit {
 
-  faKey= faKey;
   
+
   constructor() { }
 
   ngOnInit(): void {

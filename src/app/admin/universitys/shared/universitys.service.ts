@@ -7,7 +7,7 @@ import { environment } from 'src/environments/environment';
 })
 export class UniversitysService {
 
-  private apiBase: string= environment.apiBase
+  private apiBase: string= environment.apiBase;
 
   constructor(private http: HttpClient) { }
 
