@@ -25,7 +25,8 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/Edelect-Front'),
+
+      dir: require('path').join(__dirname, './coverage/edelec'),
       subdir: '.',
       reporters: [
         { type: 'html' },

@@ -1,0 +1,48 @@
+.example-form {
+  min-width: 150px;
+  max-width: 250px;
+  width: 100%;
+  padding-bottom: 30px;
+}
+
+form .Center {
+  display: flex;
+  justify-content: center;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.contenedor {
+  min-width: 300px;
+  max-width: 350px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.Separador {
+  width: 100%;
+  padding-top: 40px;
+  margin-bottom: 30px;
+  display: flex;
+}
+
+.Separador h1 {
+  font-size: 27px;
+}
+
+.Separador p {
+  font-size: 15px;
+}
+
+.Separador fa-icon {
+  color: rgba(0, 0, 0, 0.266);
+  font-size: 60px;
+  margin-left: 20px;
+}
+.Separador div {
+  width: 70%;
+}
