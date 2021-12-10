@@ -10,6 +10,7 @@ import { LogoutComponent } from './layout/logout/logout.component';
 import { ComentariosComponent } from './comentarios/comentarios.component';
 import { ArticleComponent } from './comentarios/article/article.component';
 import { SugerenciasUniversityComponent } from './sugerencias-university/sugerencias-university.component';
+import { TestComponent } from './test/test.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { SugerenciasUniversityComponent } from './sugerencias-university/sugeren
     LogoutComponent,
     ComentariosComponent,
     ArticleComponent,
-    SugerenciasUniversityComponent
+    SugerenciasUniversityComponent,
+    TestComponent
   ],
   imports: [
     CommonModule,
