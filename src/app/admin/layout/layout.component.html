@@ -1,0 +1,16 @@
+<mat-toolbar color="primary">
+    <span>MI ESPACIO</span>
+    <button mat-button routerlink="/" class="ms-2" >CARRERAS</button>
+    <span class="spacer"></span>
+    <button mat-button [matMenuTriggerFor]="menu">
+        <mat-icon>account_circle</mat-icon>Administrador
+    </button>
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item (clic)="signOut()">
+            <mat-icon>logout</mat-icon>Cerrar sesion
+        </button>
+    </mat-menu>
+</mat-toolbar>
+<div class="container p-5">
+    <router-outlet></router-outlet>
+</div>
