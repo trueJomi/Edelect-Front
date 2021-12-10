@@ -1,12 +1,9 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "cli": {
-    "analytics": "c14ef827-787c-4792-83c9-e2f5b74bb436"
-  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "edelec-app": {
+    "edelec": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -20,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/edelec-app",
+            "outputPath": "dist/edelec",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -30,9 +27,10 @@
               "src/assets"
             ],
             "styles": [
-              "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
-              "src/styles.css","src/custom-theme.scss"
+              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/styles.css",
+              "./node_modules/semantic-ui-css/semantic.min.css"
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
@@ -77,10 +75,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "edelec-app:build:production"
+              "browserTarget": "edelec:build:production"
             },
             "development": {
-              "browserTarget": "edelec-app:build:development"
+              "browserTarget": "edelec:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -88,7 +86,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "edelec-app:build"
+            "browserTarget": "edelec:build"
           }
         },
         "test": {
@@ -103,7 +101,7 @@
               "src/assets"
             ],
             "styles": [
-              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -112,5 +110,5 @@
       }
     }
   },
-  "defaultProject": "edelec-app"
+  "defaultProject": "edelec"
 }

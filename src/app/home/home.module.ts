@@ -2,22 +2,30 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { HomeRoutingModule } from './home-routing.module';
-import { LayoutComponent } from './layout/layout.component';
 import { IndexComponent } from './index/index.component';
+import { LayoutComponent } from './layout/layout.component';
 import { MaterialModule } from '../material/material.module';
-
+import { LoginComponent } from './layout/login/login.component';
+import { LogoutComponent } from './layout/logout/logout.component';
+import { ComentariosComponent } from './comentarios/comentarios.component';
+import { ArticleComponent } from './article/article.component';
+import { SugerenciasUniversityComponent } from './sugerencias-university/sugerencias-university.component';
 
 
 @NgModule({
   declarations: [
+    IndexComponent,
     LayoutComponent,
-    IndexComponent
+    LoginComponent,
+    LogoutComponent,
+    ComentariosComponent,
+    ArticleComponent,
+    SugerenciasUniversityComponent
   ],
   imports: [
     CommonModule,
     HomeRoutingModule,
     MaterialModule
-    
   ]
 })
 export class HomeModule { }
