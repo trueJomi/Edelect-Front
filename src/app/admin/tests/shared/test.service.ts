@@ -33,4 +33,8 @@ export class TestService {
   CarrerasRelacionadas(id:number){
     return this.http.get<Carrera[]>(`${this.apiBase}${this.controller}/relacionado/${id}`);
   }
+  deleteTest(id:number){
+    return this.http.delete(`${this.apiBase}${this.controller}/${id}`);
+  }
+  
 }

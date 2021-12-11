@@ -20,11 +20,7 @@ import { NewTestComponent } from './tests/new-test/new-test.component';
     SugerenciasUniversityComponent,
     TestListComponent,
     NewTestComponent,
-<<<<<<< HEAD
    
-=======
-    EditTestComponent,
->>>>>>> 4ab9179ddbb2cbdf7e2f5d1fb87558c83be86274
   ],
   imports: [
     CommonModule,
