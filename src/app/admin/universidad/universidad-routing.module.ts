@@ -8,23 +8,23 @@ import { NewUniversidadComponent } from './new-universidad/new-universidad.compo
 
 const routes: Routes = [
   {
-    path:'universidad',
-    component:ListUniversidadComponent,
-    children:[
+    path: '',
+    component: LayoutComponent,
+    children: [
       {
-        path:'universidad',
-        component:ListUniversidadComponent,
+        path: 'uni',
+        component: ListUniversidadComponent,
       },
       {
-        path:'universidad/new',
-        component:NewUniversidadComponent,
+        path: 'uni/new',
+        component: NewUniversidadComponent,
       },
       {
-        path:'universidad/:name/edit',
-        component:EditCarreraComponent,
-      }
-    ]
-  }
+        path: 'uni/:id/edit',
+        component: EditCarreraComponent,
+      },
+    ],
+  },
 ];
 
 @NgModule({

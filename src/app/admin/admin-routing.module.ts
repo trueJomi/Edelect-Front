@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { SugerenciasUniversityComponent } from './sugerencias-university/sugerencias-university.component';
 import {NewTestComponent} from "./tests/new-test/new-test.component";
 import {TestListComponent} from "./tests/test-list/test-list.component";
+import { UniversidadModule } from './universidad/universidad.module';
 
 
 const routes: Routes = [
@@ -18,6 +19,14 @@ const routes: Routes = [
     path:'testList',
     component:TestListComponent,
   },
+   
+    {
+      path:'universidad',
+      loadChildren: ()=>
+      import('./universidad/universidad.module').then((m)=>m.UniversidadModule)
+    },
+  
+    
   
 
 ];
