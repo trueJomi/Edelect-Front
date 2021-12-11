@@ -1,1 +1,71 @@
-<p>login works!</p>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="login.component.css" />
+  <script src="https://kit.fontawesome.com/dd8c49730d.js" 
+  crossorigin="anonymous"></script>
+  <title>Edelec</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="edelec.png" alt="logo">
+        </div>
+    </header>
+    <hr class="blue">
+    <hr class="white">
+  <div class="container" id="container">
+    <hr class="center">
+    <div class="form-container sign-up-container">
+      <form>
+        <h1>Crear una cuenta</h1>
+        <br>
+        <span>Ingrese sus datos</span>
+        <input type="text" placeholder="Nombre" />
+        <input type="email" placeholder="Correo" />
+        <input type="password" placeholder="Contraseña" />
+        <button>Registrarse</button>
+      </form>
+    </div>
+    <div class="form-container sign-in-container">
+      <form>
+        <h1>Iniciar Sesion</h1>
+        <div class="social-container">
+          <a href="#" class="social"><i class="fab fa-facebook"></i></a>
+          <a href="#" class="social"><i class="fab fa-google"></i></a>
+          <a href="#" class="social"><i class="fab fa-instagram"></i></a>
+        </div>
+        <span>Tiene una cuenta? </span>
+        <input type="email" placeholder="Correo" />
+        <input type="password" id="fakePassword" placeholder="Contraseña" />
+        <span><i id="toggler"class="far fa-eye fa-eye-slash"></i></span>
+        <button>Iniciar sesion</button>
+      </form>
+    </div>
+
+    <div class="overlay-container">
+      <div class="overlay">
+        <div class="overlay-panel overlay-left">
+          <h1>Bienvenido</h1>
+          <p> Si ya tiene una cuenta, inicie sesión para poder hacer uso de todas las opciones disponibles</p>
+          <button class="ghost" id="signIn">Iniciar Sesion</button>
+        </div>
+        <div class="overlay-panel overlay-right">
+          <h1>Hola alumno</h1>
+          <p>¿No tienes cuenta? <br> ¡Regístrese con sus datos personales para tener acceso a todas las opciones ! </p>
+          <button class="ghost" id="signUp">Registrarse</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="login.component.js"></script>
+  </div>
+  
+</body>
+
+</html>
