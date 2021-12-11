@@ -15,13 +15,9 @@ import { DeleteCarreraComponent } from './carrera/delete-carrera/delete-carrera.
 import { DeleteUniversitysComponent } from './universitys/delete-universitys/delete-universitys.component';
 import { MaterialModule } from '../material/material.module';
 import { SugerenciasUniversityComponent } from './sugerencias-university/sugerencias-university.component';
-<<<<<<< HEAD
-import { TestBaseComponent } from './test-base/test-base.component';
-=======
 import { TestListComponent } from './tests/test-list/test-list.component';
 import { NewTestComponent } from './tests/new-test/new-test.component';
 import { EditTestComponent } from './tests/edit-test/edit-test.component';
->>>>>>> 6f736d0caff85acf97ebd2f09fb0d8000c3e371e
 
 
 @NgModule({
@@ -38,13 +34,9 @@ import { EditTestComponent } from './tests/edit-test/edit-test.component';
     DeleteCarreraComponent,
     DeleteUniversitysComponent,
     SugerenciasUniversityComponent,
-<<<<<<< HEAD
-    TestBaseComponent
-=======
     TestListComponent,
     NewTestComponent,
     EditTestComponent
->>>>>>> 6f736d0caff85acf97ebd2f09fb0d8000c3e371e
   ],
   imports: [
     CommonModule,

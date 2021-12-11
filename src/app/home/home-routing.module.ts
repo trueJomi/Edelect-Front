@@ -4,6 +4,7 @@ import { ComentariosComponent } from './comentarios/comentarios.component';
 import { IndexComponent } from './index/index.component';
 import { LayoutComponent } from './layout/layout.component';
 import { SugerenciasUniversityComponent } from './sugerencias-university/sugerencias-university.component';
+import { TestComponent } from './test/test.component';
 
 const routes: Routes = [{
   path:  '',
@@ -14,7 +15,19 @@ const routes: Routes = [{
       component: IndexComponent,
     }
   ],
-},
+}
+,
+{
+  path:'test',
+  component: TestComponent,
+  children:[
+    {
+      path:'',
+      component: IndexComponent,
+    }
+  ],
+}
+,
 {
   path:'comentarios',
   component:ComentariosComponent,
