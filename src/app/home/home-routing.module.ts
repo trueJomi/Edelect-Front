@@ -3,7 +3,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { ComentariosComponent } from './comentarios/comentarios.component';
 import { IndexComponent } from './index/index.component';
 import { LayoutComponent } from './layout/layout.component';
-import { SugerenciasUniversityComponent } from './sugerencias-university/sugerencias-university.component';
 
 const routes: Routes = [{
   path:  '',
@@ -18,10 +17,6 @@ const routes: Routes = [{
 {
   path:'comentarios',
   component:ComentariosComponent,
-},
-{
-  path:'sugerencias',
-  component:SugerenciasUniversityComponent,
 },
 ];
 

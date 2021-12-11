@@ -10,6 +10,10 @@ import { SugerenciasUniversityComponent } from './sugerencias-university/sugeren
 import { TestListComponent } from './tests/test-list/test-list.component';
 import { NewTestComponent } from './tests/new-test/new-test.component';
 import { EditTestComponent } from './tests/edit-test/edit-test.component';
+import {ReactiveFormsModule} from "@angular/forms";
+import { NewEgresadoComponent } from './egresado/new-egresado/new-egresado.component';
+import { ListEgresadoComponent } from './egresado/list-egresado/list-egresado.component';
+import { UpdateEgresadoComponent } from './egresado/edit-egresado/update-egresado.component';
 
 
 @NgModule({
@@ -22,11 +26,15 @@ import { EditTestComponent } from './tests/edit-test/edit-test.component';
     TestListComponent,
     NewTestComponent,
     EditTestComponent,
+    NewEgresadoComponent,
+    ListEgresadoComponent,
+    UpdateEgresadoComponent,
   ],
   imports: [
     CommonModule,
     AdminRoutingModule,
-    MaterialModule
+    MaterialModule,
+    ReactiveFormsModule
   ]
 })
 export class AdminModule { }

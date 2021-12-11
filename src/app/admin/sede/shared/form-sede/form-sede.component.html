@@ -1,0 +1,61 @@
+<div class="row">
+  <div class="col-md-offset-3 mx-auto">
+    <form
+      (ngSubmit)="save()"
+      autocomplete="off"
+      [formGroup]="form"
+      #frmLibro="ngForm"
+    >
+      <mat-form-field appearance="outline" class="d-block">
+        <mat-label>Id Universidad</mat-label>
+        <input
+          matInput
+          type="number"
+          placeholder="Título"
+          formControlName="title"
+        />
+
+        <mat-error *ngIf="form.controls.universidad.hasError('required')">
+          Este campo es obligatorio
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="d-block">
+        <mat-label>Direccion</mat-label>
+        <textarea matInput formControlName="direccion" row="5"></textarea>
+
+        <mat-error *ngIf="form.controls.direccion.hasError('required')">
+          Este campo es obligatorio
+        </mat-error>
+        <mat-error *ngIf="form.controls.direccion.hasError('minlength')">
+          Debe tener al menos 5 caracteres
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="d-block">
+        <mat-label>Ubicacion</mat-label>
+        <input
+          matInput
+          type="text"
+          placeholder="Ubicacion"
+          formControlName="ubicacion"
+        />
+        <mat-error *ngIf="form.controls.ubicacion.hasError('required')">
+          Este campo es obligatorio
+        </mat-error>
+      </mat-form-field>
+
+      <button mat-button routerLink="/admin/sedes">Cancelar</button>
+
+      <button
+        mat-raised-button
+        color="primary"
+        type="submit"
+        class="ms-2"
+        [disabled]="frmLibro.invalid"
+      >
+        Guardar
+      </button>
+    </form>
+  </div>
+</div>
