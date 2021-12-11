@@ -17,7 +17,6 @@ import { MaterialModule } from '../material/material.module';
 import { SugerenciasUniversityComponent } from './sugerencias-university/sugerencias-university.component';
 import { TestListComponent } from './tests/test-list/test-list.component';
 import { NewTestComponent } from './tests/new-test/new-test.component';
-import { EditTestComponent } from './tests/edit-test/edit-test.component';
 
 
 @NgModule({
@@ -36,7 +35,7 @@ import { EditTestComponent } from './tests/edit-test/edit-test.component';
     SugerenciasUniversityComponent,
     TestListComponent,
     NewTestComponent,
-    EditTestComponent
+   
   ],
   imports: [
     CommonModule,

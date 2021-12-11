@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {TestService} from "../shared/test.service";
 
 @Component({
   selector: 'app-test-list',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TestListComponent implements OnInit {
 
-  constructor() { }
+  constructor(private testService:TestService) { }
 
   ngOnInit(): void {
-  }
 
+  }
+  getAllTest(){
+    this.testService.getAllTest();
+
+  }
 }
