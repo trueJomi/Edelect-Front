@@ -1,3 +1,23 @@
-
-<p>layout works!</p>
+<mat-toolbar color="primary">
+    <span>Administración</span>
+  
+    <button mat-button routerLink="/admin/test/list" class="ms-2">test</button>
+    <button mat-button routerLink="/admin/coffes" class="ms-2">usuarios</button>
+  
+    <span class="spacer"></span>
+  
+    <button mat-button [matMenuTriggerFor]="menu">
+      <mat-icon>account_circle</mat-icon>admin
+    </button>
+  
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item (click)="signOut()">
+        <mat-icon>logout</mat-icon> Cerrar sesión
+      </button>
+    </mat-menu>
+  </mat-toolbar>
+  
+  <div class="container p-5">
+    <router-outlet></router-outlet>
+  </div>
 
