@@ -11,10 +11,11 @@ export class TestListComponent implements OnInit {
   constructor(private testService:TestService) { }
 
   ngOnInit(): void {
-
+    this.getAllTest()
   }
   getAllTest(){
-    this.testService.getAllTest();
-
+    this.testService.getAllTest().subscribe((data)=>{
+      console.log(data)
+    });
   }
 }

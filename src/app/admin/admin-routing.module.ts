@@ -15,7 +15,7 @@ const routes: Routes = [
     component:NewTestComponent,
   },
   {
-    path:'test/:userid',
+    path:'testList',
     component:TestListComponent,
   },
   
