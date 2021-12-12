@@ -7,6 +7,8 @@ import {NewSedeComponent} from "./sede/new-sede/new-sede.component";
 import {EditSedeComponent} from "./sede/edit-sede/edit-sede.component";
 import {ListEgresadoComponent} from "./egresado/list-egresado/list-egresado.component";
 import {NewEgresadoComponent} from "./egresado/new-egresado/new-egresado.component";
+import {ListCarreraComponent} from "./carrera/list-carrera/list-carrera.component";
+import {NewCarreraComponent} from "./carrera/new-carrera/new-carrera.component";
 
 const routes: Routes = [
   {
@@ -33,6 +35,16 @@ const routes: Routes = [
         path: 'egresados/new',
         component: NewEgresadoComponent,
       },
+
+      {
+        path: 'carreras',
+        component: ListCarreraComponent,
+      },
+      {
+        path: 'carreras/new',
+        component: NewCarreraComponent,
+      },
+
     ],
   },
 ];

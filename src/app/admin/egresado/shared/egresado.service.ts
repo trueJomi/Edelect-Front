@@ -28,4 +28,5 @@ export class EgresadoService {
   }
   deleteSede(id: number) {
     return this.http.delete(this.apiBase + '/egresados/'+ id)
-  }}
+  }
+}
