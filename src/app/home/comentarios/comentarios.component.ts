@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Article } from './article/article.model';
+import { Article } from './shared/article.model';
+import { CommentService } from './shared/comentarios.service';
 
 @Component({
   selector: 'app-comentarios',
@@ -17,14 +18,24 @@ export class ComentariosComponent implements OnInit {
     return false;
   }
 
-  constructor() {
-
+  constructor(private commentService: CommentService) { 
+ 
   }
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
+    
+    this.getAllArticles();
   }
   sortArticles():Article[]{
 return this.articles.sort((a:Article,b:Article) =>b.votes-a.votes);
 
+  }
+  getAllArticles() {
+ this.commentService.getAllArticles()
+      .subscribe((data: any)=>{
+        this.articles=data;
+        console.log(data);
+      });
+
+      
   }
 }

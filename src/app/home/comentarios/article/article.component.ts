@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import {  HostBinding } from '@angular/core';
-import{Article}from './article.model';
+import{Article}from '../shared/article.model';
 @Component({
   selector: 'app-article',
   templateUrl: './article.component.html',
