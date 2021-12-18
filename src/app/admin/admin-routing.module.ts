@@ -1,20 +1,26 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { SugerenciasUniversityComponent } from './sugerencias-university/sugerencias-university.component';
 import {LayoutComponent} from "./layout/layout.component";
-import {ListSedeComponent} from "./sede/list-sede/list-sede.component";
-import {NewSedeComponent} from "./sede/new-sede/new-sede.component";
-import {EditSedeComponent} from "./sede/edit-sede/edit-sede.component";
 import {ListEgresadoComponent} from "./egresado/list-egresado/list-egresado.component";
 import {NewEgresadoComponent} from "./egresado/new-egresado/new-egresado.component";
 import {ListCarreraComponent} from "./carrera/list-carrera/list-carrera.component";
 import {NewCarreraComponent} from "./carrera/new-carrera/new-carrera.component";
+import {UpdateEgresadoComponent} from "./egresado/edit-egresado/update-egresado.component";
+import {EditCarreraComponent} from "./carrera/edit-carrera/edit-carrera.component";
+import {ListUniversidadComponent} from "./universidad/list-universidad/list-universidad.component";
+import {NewUniversidadComponent} from "./universidad/new-universidad/new-universidad.component";
+import {EditUniversidadComponent} from "./universidad/edit-universidad/edit-universidad.component";
+import {ListSedeComponent} from "./sede/list-sede/list-sede.component";
+import {NewSedeComponent} from "./sede/new-sede/new-sede.component";
+import {EditSedeComponent} from "./sede/edit-sede/edit-sede.component";
 
 const routes: Routes = [
   {
     path: '',
     component: LayoutComponent,
     children: [
+
+
       {
         path: 'sedes',
         component: ListSedeComponent,
@@ -27,6 +33,7 @@ const routes: Routes = [
         path: 'sedes/:id/editar',
         component: EditSedeComponent,
       },
+
       {
         path: 'egresados',
         component: ListEgresadoComponent,
@@ -34,6 +41,10 @@ const routes: Routes = [
       {
         path: 'egresados/new',
         component: NewEgresadoComponent,
+      },
+      {
+        path: 'egresados/:id/editar',
+        component: UpdateEgresadoComponent,
       },
 
       {
@@ -44,6 +55,23 @@ const routes: Routes = [
         path: 'carreras/new',
         component: NewCarreraComponent,
       },
+      {
+        path: 'carreras/:id/editar',
+        component: EditCarreraComponent,
+      },
+      {
+        path: 'universidades',
+        component: ListUniversidadComponent,
+      },
+      {
+        path: 'universidades/new',
+        component: NewUniversidadComponent,
+      },
+      {
+        path: 'universidades/:id/editar',
+        component: EditUniversidadComponent,
+      },
+
 
     ],
   },

@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import {environment} from "../../../../environments/environment";
 import {HttpClient} from "@angular/common/http";
-import {Egresado} from "../../egresado/shared/egresado.model";
 import {Carrera} from "./carrera.model";
+
 
 @Injectable({
   providedIn: 'root'
@@ -14,20 +14,20 @@ export class CarreraService {
   constructor(private http:HttpClient) { }
 
   getAllCarreras(){
-    return this.http.get<Carrera[]>(this.apiBase+'/carrera')
+    return this.http.get<Carrera[]>(this.apiBase+'/carreras')
   }
 
   getCarreraById(id: number) {
-    return this.http.get(this.apiBase+'/carrera/'+id)
+    return this.http.get(this.apiBase+'/carreras/'+id)
   }
   createCarrera(carrera: Carrera) {
-    return this.http.post(this.apiBase + '/carrera', carrera)
+    return this.http.post(this.apiBase + '/carreras', carrera)
   }
   updateCarrera(carrera: Carrera) {
-    return this.http.put(this.apiBase + '/carrera', carrera)
+    return this.http.put(this.apiBase + '/carreras', carrera)
   }
   deleteCarrera(id: number) {
-    return this.http.delete(this.apiBase + '/carrera/'+ id)
+    return this.http.delete(this.apiBase + '/carreras/'+ id)
   }
 
 }

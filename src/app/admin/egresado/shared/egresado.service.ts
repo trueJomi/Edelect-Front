@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import {environment} from "../../../../environments/environment";
 import {HttpClient} from "@angular/common/http";
-import {Sede} from "../../sede/shared/sede.model";
 import {Egresado} from "./egresado.model";
 
 @Injectable({
@@ -14,19 +13,19 @@ export class EgresadoService {
   constructor(private http:HttpClient) { }
 
   getAllEgresados(){
-    return this.http.get<Egresado[]>(this.apiBase+'/egresados/all')
+    return this.http.get<Egresado[]>(this.apiBase+'/egresados')
   }
 
-  getSedeById(id: number) {
+  getEgresadoById(id: number) {
     return this.http.get(this.apiBase+'/egresados/'+id)
   }
-  createSede(egresado: Egresado) {
-    return this.http.post(this.apiBase + '/egresados', egresado)
+  createEgresado(egresado: Egresado, idSede: number, idCarrera:number) {
+    return this.http.post(this.apiBase + '/egresados/'+idSede+'/'+idCarrera, egresado)
   }
-  updateSede(egresado: Egresado) {
-    return this.http.put(this.apiBase + '/egresados', egresado)
+  updateEgresado(egresado: Egresado, idSede: number, idCarrera:number) {
+    return this.http.put(this.apiBase + '/egresados/'+idSede+'/'+idCarrera, egresado)
   }
-  deleteSede(id: number) {
+  deleteEgresado(id: number) {
     return this.http.delete(this.apiBase + '/egresados/'+ id)
   }
 }

@@ -1,1 +1,15 @@
-<p>edit-sede works!</p>
+<form style="margin-bottom: 30px">
+  <mat-form-field appearance="fill">
+    <mat-label>Seleciona la universidad a la que pertenece la sede</mat-label>
+    <mat-select [(ngModel)]="selectedValue" name="food">
+      <mat-option *ngFor="let universidad of universidades" [value]="universidad.idUniversidad">
+        {{universidad.name}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <p> Id de la Universidad: {{selectedValue}} </p>
+  <mat-divider></mat-divider>
+</form>
+
+
+<app-form-sede (onSubmit)="updateSede($event)"></app-form-sede>

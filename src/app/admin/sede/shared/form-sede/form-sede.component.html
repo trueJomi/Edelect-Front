@@ -7,41 +7,36 @@
       #frmLibro="ngForm"
     >
       <mat-form-field appearance="outline" class="d-block">
-        <mat-label>Id Universidad</mat-label>
+        <mat-label>Ubicación de la sede</mat-label>
         <input
           matInput
-          type="number"
-          placeholder="Título"
-          formControlName="title"
+          type="text"
+          placeholder="Ubicación de la sede"
+          formControlName="ubicacion"
         />
 
-        <mat-error *ngIf="form.controls.universidad.hasError('required')">
+        <mat-error *ngIf="form.controls.ubicacion.hasError('required')">
           Este campo es obligatorio
+        </mat-error>
+        <mat-error *ngIf="form.controls.ubicacion.hasError('minlength')">
+          Debe tener al menos 3 caracteres
         </mat-error>
       </mat-form-field>
 
       <mat-form-field appearance="outline" class="d-block">
-        <mat-label>Direccion</mat-label>
-        <textarea matInput formControlName="direccion" row="5"></textarea>
+        <mat-label>Dirección de la sede</mat-label>
+        <input
+          matInput
+          type="text"
+          placeholder="Dirección de la sede"
+          formControlName="direccion"
+        />
 
         <mat-error *ngIf="form.controls.direccion.hasError('required')">
           Este campo es obligatorio
         </mat-error>
         <mat-error *ngIf="form.controls.direccion.hasError('minlength')">
-          Debe tener al menos 5 caracteres
-        </mat-error>
-      </mat-form-field>
-
-      <mat-form-field appearance="outline" class="d-block">
-        <mat-label>Ubicacion</mat-label>
-        <input
-          matInput
-          type="text"
-          placeholder="Ubicacion"
-          formControlName="ubicacion"
-        />
-        <mat-error *ngIf="form.controls.ubicacion.hasError('required')">
-          Este campo es obligatorio
+          Debe tener al menos 3 caracteres
         </mat-error>
       </mat-form-field>
 

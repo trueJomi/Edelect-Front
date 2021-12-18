@@ -1,9 +1,10 @@
+import {Universidad} from "../../universidad/shared/universidad.model";
 
-
-export class Sede   {
-  idSede?: number;
+export class Sede{
+  idSede: number;
   ubicacion: string;
-  direccion: string;
-  universidad: object[];
-
+  direccion: string
+  universidad: Universidad
 }
+
+

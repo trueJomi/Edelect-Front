@@ -1,1 +1,29 @@
-<p>update-egresado works!</p>
+<h3>Actualizar Egresado</h3>
+
+<form style="margin-bottom: 30px">
+  <mat-form-field appearance="fill">
+    <mat-label>Seleciona la carrera que estudia el egresado</mat-label>
+    <mat-select [(ngModel)]="selectedCarrera" name="carreras">
+      <mat-option *ngFor="let carrera of carreras" [value]="carrera.idCarrera">
+        {{carrera.nombreCarrera}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <p> Id de la Carrera: {{selectedCarrera}} </p>
+  <mat-divider></mat-divider>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Seleciona la carrera que estudia el egresado</mat-label>
+    <mat-select [(ngModel)]="selectedSede" name="sedes">
+      <mat-option *ngFor="let sede of sedes" [value]="sede.idSede">
+        {{sede.universidad.name +"  -  "+ sede.ubicacion}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <p> Id de la Carrera: {{selectedSede}} </p>
+  <mat-divider></mat-divider>
+
+</form>
+
+
+<app-form-egresado (onSubmit)="updateSede($event)"></app-form-egresado>

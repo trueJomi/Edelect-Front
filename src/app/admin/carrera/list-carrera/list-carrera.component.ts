@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {MatTableDataSource} from "@angular/material/table";
-import {Sede} from "../../sede/shared/sede.model";
-import {SedeService} from "../../sede/shared/sede.service";
 import {CarreraService} from "../shared/carrera.service";
+import Swal from 'sweetalert2';
+import {Carrera} from "../shared/carrera.model";
+
 
 @Component({
   selector: 'app-list-carrera',
@@ -12,20 +13,19 @@ import {CarreraService} from "../shared/carrera.service";
 export class ListCarreraComponent implements OnInit {
 
   displayedColumns: string[] = ['idCarrera', 'nombreCarrera', 'descripcionDeCarrera', 'edit', 'delete'];
-  dataSource_carrera: MatTableDataSource<Sede>;
+  dataSource_carrera: MatTableDataSource<Carrera>;
 
   constructor(private carreraService: CarreraService) {}
 
   ///Todo lo que pongamos acá será ejecutado luego del constructor, antes de ser renderizado/montaje.
   ngOnInit(): void {
-    this.getAllSedes();
+    this.getAllCarreras();
   }
 
-  getAllSedes(){
+  getAllCarreras(){
     this.carreraService.getAllCarreras().subscribe((data : any)=> {
       this.dataSource_carrera= new MatTableDataSource(data);
       console.log(data)
-      console.log("asdasd")
     })
   }
 
@@ -34,14 +34,34 @@ export class ListCarreraComponent implements OnInit {
   }
 
   delete(id: number) {
-    const ok = confirm("¿Estás seguro que quieres eliminar este elemento?")
+    Swal.fire({
+      title: 'Estas Seguro',
+      text:'Esto no se puede deshacer',
+      icon:'question',
+      showCancelButton:true,
+      confirmButtonText:'Si, Borrarlo',
+      confirmButtonColor:'#3085d6',
+      cancelButtonColor:'#d33',
+  }).then(respuesta => {
 
-    if (ok) {
+      if(respuesta.value){
+        this.carreraService.deleteCarrera(id).subscribe(() => {
+          this.ngOnInit();
+          Swal.fire({
+            icon: 'success',
+            title: 'La carrera se ha eliminado',
+            showConfirmButton: false,
+            timer: 1500
+          })
+        },(error:any)=>{
+          Swal.fire({
+            title:"Carrera no borrada",
+            text:"Ha ocurrido un error al intentar borrar este elemento’",
+            icon:"error",
+          })
+        })
+      }
 
-      this.carreraService.getCarreraById(id).subscribe(() => {
-        this.ngOnInit();
-      })
-    }
+    })
   }
-
 }

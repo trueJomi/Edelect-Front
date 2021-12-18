@@ -33,9 +33,16 @@
       <td mat-cell *matCellDef="let element">{{ element.nombreEgresado }}</td>
     </ng-container>
 
-    <ng-container matColumnDef="curriculum">
+    <ng-container matColumnDef="Carrera">
       <th mat-header-cell *matHeaderCellDef mat-sort-header>Curriculum</th>
-      <td mat-cell *matCellDef="let element">{{ element.curriculum }}</td>
+      <td mat-cell *matCellDef="let element">{{ element.carrera.nombreCarrera }}</td>
+    </ng-container>
+
+
+
+    <ng-container matColumnDef="Universidad">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Curriculum</th>
+      <td mat-cell *matCellDef="let element">{{ element.sede.universidad.name }}</td>
     </ng-container>
 
     <ng-container matColumnDef="edit">
@@ -53,7 +60,7 @@
     <ng-container matColumnDef="delete">
       <th mat-header-cell *matHeaderCellDef>Eliminar</th>
       <td mat-cell *matCellDef="let element">
-        <button mat-button color="primary" (click)="delete(element.id)">
+        <button mat-button color="primary" (click)="deleteEgresado(element.idEgresado)">
           <mat-icon>delete</mat-icon>
         </button>
       </td>
