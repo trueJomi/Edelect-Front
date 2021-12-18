@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+}
+header{
+    width: 100%;
+    height: 5rem;
+    display: flex;
+}
+body {
+    background-color: #F2F4F8;
+    color: #1e579c;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+  }
+.blue{
+    width: 240%;
+    background-color: #1e579c;
+    height: 6rem;
+    margin-left: 74rem;
+    transform: rotate(-50deg);
+    border: none;
+}
+.white{
+    width: 240%;
+    background-color: #FFFFFF;
+    height: 18rem;
+    margin-left: 124rem;
+    transform: rotate(-50deg);
+    border: none;
+}
+.cuerpo{
+    margin-top: 6.8%;
+    position: absolute;
+    overflow: hidden;
+    padding: 2% 4% ;
+    background-color: #b8d0f0;
+    min-height: 480px;
+    width: 768px;
+    max-width: 100%;
+    opacity: 0.8;
+    border-radius: 8px;
+}
+
+.blue-small{
+    width: 240%;
+    background-color: #1e579c;
+    height: 6rem;
+    margin-left: -57rem;
+    transform: rotate(-50deg);
+    border: none;
+}
+
+.white-small{
+    width: 240%;
+    background-color: #b8d0f0;
+    height: 1rem;
+    margin-left: -62rem;
+    transform: rotate(-50deg);
+    border: none;
+}
+
+.white-small-2{
+    width: 240%;
+    background-color: #b8d0f0;
+    height: 1rem;
+    margin-left: -59rem;
+    transform: rotate(-50deg);
+    border: none;
+}
+.overlay-cuerpo {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: transform 0.6s ease-in-out;
+    z-index: 100;
+  }
+  
+.fa-user-circle{
+    float: left;
+    font-size: 12rem;
+    color: #F2F4F8;
+}
+
+.username{
+    padding-top: 3rem;
+    padding-left: 13rem;
+    font-size: 4rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.us1{
+    border: 2px solid #414141 ;
+    background-color: #414141;
+    border-radius: 8px;
+}
+.line{
+    display: inline-block;
+    width: 22rem;
+    padding-left: 1.4rem;
+}
+.fa-user-edit{
+    float: right;
+    font-size: 2rem;
+    color: #e7effa
+}
+
+.edit{
+    border: none;
+    background-color: #b8d0f0;
+    transform: translate(4rem,-2rem);
+}
+
+.fa-user-edit:hover{
+    color: #1e579c;
+}
+
+article{
+    margin-top: 6rem;
+}
+
+h2{
+    margin-bottom: 1.8%;
+}
+img{
+    margin: 1%;
+    width: 12%;
+}
+
+img:hover{
+    transform: translate(1px,1px);
+    cursor: pointer;
+}
+
+.eliminar{
+    position: absolute;
+    transform: translate(34rem,-8rem);
+    border: none;
+    background-color: #b8d0f0;
+}
+
+.fa-user-times{
+    float: right;
+    font-size: 3rem;
+    color: #1e579c;
+}
+
+.fa-user-times:hover{
+    color: #f31212;
+    cursor: pointer;
+}
+
+.option{
+    transform: translate(60rem,-2.8rem);
+    position: sticky;
+}
+.option h2{
+    display: inline;
+    color: red;
+}

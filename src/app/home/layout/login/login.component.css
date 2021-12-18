@@ -19,7 +19,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-image: url(4.jpg);
+  /* background-image: url(4.jpg); */
   background-size: cover;
   overflow: hidden;
 }
@@ -272,7 +272,7 @@ button:focus {
   position: absolute;  
   right: 20px;  
   top: 50%; 
-  transform: translate(-400%,520%);  
+  transform: translate(-400%,420%);  
   cursor: pointer;  
 }
 
