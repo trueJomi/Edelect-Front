@@ -14,5 +14,7 @@ export class LayoutComponent implements OnInit {
   signOut() {
     console.log('HOLAAAAA!!!!!');
   }
+  signOut() {
 
+}
 }

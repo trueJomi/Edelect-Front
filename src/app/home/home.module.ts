@@ -9,6 +9,9 @@ import { LoginComponent } from './layout/login/login.component';
 import { LogoutComponent } from './layout/logout/logout.component';
 import { ComentariosComponent } from './comentarios/comentarios.component';
 import { ArticleComponent } from './article/article.component';
+import { ArticleComponent } from './comentarios/article/article.component';
+import { SugerenciasUniversityComponent } from './sugerencias-university/sugerencias-university.component';
+import { TestComponent } from './test/test.component';
 
 
 @NgModule({
@@ -19,6 +22,8 @@ import { ArticleComponent } from './article/article.component';
     LogoutComponent,
     ComentariosComponent,
     ArticleComponent,
+    SugerenciasUniversityComponent,
+    TestComponent
   ],
   imports: [
     CommonModule,

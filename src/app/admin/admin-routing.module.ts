@@ -13,8 +13,30 @@ import {EditUniversidadComponent} from "./universidad/edit-universidad/edit-univ
 import {ListSedeComponent} from "./sede/list-sede/list-sede.component";
 import {NewSedeComponent} from "./sede/new-sede/new-sede.component";
 import {EditSedeComponent} from "./sede/edit-sede/edit-sede.component";
+import { LayoutComponent } from './layout/layout.component';
+import { SugerenciasUniversityComponent } from './sugerencias-university/sugerencias-university.component';
+import {NewTestComponent} from "./tests/new-test/new-test.component";
+import {TestListComponent} from "./tests/test-list/test-list.component";
+import { UniversidadModule } from './universidad/universidad.module';
+
 
 const routes: Routes = [
+
+  {
+    path: 'test',
+    component: LayoutComponent,
+    children:[
+      {
+        path:'list',
+        component:TestListComponent,
+      },
+      {
+        path:'new',
+        component:NewTestComponent,
+      },
+    ]
+  }
+  ,
   {
     path: '',
     component: LayoutComponent,
@@ -82,3 +104,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AdminRoutingModule { }
+

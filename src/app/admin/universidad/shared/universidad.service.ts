@@ -7,7 +7,6 @@ import {environment} from "../../../../environments/environment";
   providedIn: 'root'
 })
 export class UniversidadService {
-  private apiBase= environment.apiBase
 
   constructor(private http:HttpClient) { }
   getAllUniversidades(){

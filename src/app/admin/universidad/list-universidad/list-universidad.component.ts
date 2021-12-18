@@ -1,8 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {MatTableDataSource} from "@angular/material/table";
-import {UniversidadService} from "../shared/universidad.service";
-import Swal from "sweetalert2";
-import {Universidad} from "../shared/universidad.model";
 
 @Component({
   selector: 'app-list-universidad',
