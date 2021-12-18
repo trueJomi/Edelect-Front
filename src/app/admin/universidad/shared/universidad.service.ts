@@ -7,8 +7,10 @@ import {environment} from "../../../../environments/environment";
   providedIn: 'root'
 })
 export class UniversidadService {
+  apiBase= environment.apiBase;
 
   constructor(private http:HttpClient) { }
+
   getAllUniversidades(){
     return this.http.get<Universidad[]>(this.apiBase+'/universidades')
   }
