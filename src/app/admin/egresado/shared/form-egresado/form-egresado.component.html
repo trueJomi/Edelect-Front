@@ -1,0 +1,72 @@
+<div class="row">
+  <div class="col-md-offset-3 mx-auto">
+    <form
+      (ngSubmit)="save()"
+      autocomplete="off"
+      [formGroup]="form"
+      #frmLibro="ngForm"
+    >
+      <mat-form-field appearance="outline" class="d-block">
+        <mat-label>Nombre del Egresado</mat-label>
+        <input
+          matInput
+          type="text"
+          placeholder="Nombre del Egresado"
+          formControlName="nombreEgresado"
+        />
+
+        <mat-error *ngIf="form.controls.nombreEgresado.hasError('required')">
+          Este campo es obligatorio
+        </mat-error>
+        <mat-error *ngIf="form.controls.nombreEgresado.hasError('minlength')">
+          Debe tener al menos 3 caracteres
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="d-block" >
+        <mat-label>Curriculum del Egresado</mat-label>
+        <input
+          matInput
+          type="text"
+          placeholder="Curriculum del Egresado"
+          formControlName="curriculum"
+        />
+
+        <mat-error *ngIf="form.controls.curriculum.hasError('required')">
+          Este campo es obligatorio
+        </mat-error>
+        <mat-error *ngIf="form.controls.curriculum.hasError('minlength')">
+          Debe tener al menos 3 caracteres
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="d-block" >
+        <mat-label>Enlace de la foto del egresado</mat-label>
+        <input
+          matInput
+          type="text"
+          placeholder="Enlace de la foto del egresado"
+          formControlName="fotoEgresado"
+        />
+
+        <mat-error *ngIf="form.controls.fotoEgresado.hasError('required')">
+          Este campo es obligatorio
+        </mat-error>
+        <mat-error *ngIf="form.controls.fotoEgresado.hasError('minlength')">
+          Debe tener al menos 3 caracteres
+        </mat-error>
+      </mat-form-field>
+
+      <button mat-button routerLink="/admin/egresados">Cancelar</button>
+
+      <button
+        mat-raised-button
+        color="primary"
+        type="submit"
+        class="ms-2"
+        [disabled]="frmLibro.invalid"
+      >
+        Guardar
+      </button>
+    </form>
+  </div>
+</div>

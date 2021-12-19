@@ -1,4 +1,5 @@
 <mat-toolbar color="primary">
+<<<<<<< HEAD
     <span>Administración</span>
   
     <button mat-button routerLink="/admin/test" class="ms-2">test</button>
@@ -8,16 +9,25 @@
   
     <button mat-button [matMenuTriggerFor]="menu">
       <mat-icon>account_circle</mat-icon>admin
-    </button>
-  
-    <mat-menu #menu="matMenu">
-      <button mat-menu-item (click)="signOut()">
-        <mat-icon>logout</mat-icon> Cerrar sesión
-      </button>
-    </mat-menu>
-  </mat-toolbar>
-  
-  <div class="container p-5">
-    <router-outlet></router-outlet>
-  </div>
+=======
+  <span>Administración</span>
 
+  <button mat-button routerLink="/admin/coffes" class="ms-2">CRUD</button>
+
+  <span class="spacer"></span>
+
+  <button mat-button [matMenuTriggerFor]="menu">
+    <mat-icon>account_circle</mat-icon> Hugo Vera Sánchez
+  </button>
+
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item (click)="signOut()">
+      <mat-icon>logout</mat-icon> Cerrar sesión
+>>>>>>> acefda8b2aba70d8e9d7f59482e0b0d85ca7ce37
+    </button>
+  </mat-menu>
+</mat-toolbar>
+
+<div class="container p-5">
+  <router-outlet></router-outlet>
+</div>
