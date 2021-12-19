@@ -1,1 +1,66 @@
-<p>list-carrera works!</p>
+<h3 class="fw-bold">Lista de Carreras</h3>
+
+<div class="text-end">
+  <button mat-raised-button color="primary" routerLink="/admin/carreras/new">
+    Nueva Carrera
+  </button>
+</div>
+
+<div class="example-header">
+  <mat-form-field>
+    <input
+      matInput
+      (keyup)="applyFilter($event.target.value)"
+      placeholder="Buscar carrera"
+    />
+  </mat-form-field>
+</div>
+
+<div>
+  <table
+    mat-table
+    [dataSource]="dataSource_carrera"
+    matSort
+    class="mat-elevation-z8"
+    class="w-100">
+    <ng-container matColumnDef="idCarrera">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>ID</th>
+      <td mat-cell *matCellDef="let element">{{ element.idCarrera }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="nombreCarrera">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>nombreCarrera</th>
+      <td mat-cell *matCellDef="let element">{{ element.nombreCarrera }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="descripcionDeCarrera">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>descripcionDeCarrera</th>
+      <td mat-cell *matCellDef="let element">{{ element.descripcionDeCarrera }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="edit">
+      <th mat-header-cell *matHeaderCellDef>Editar</th>
+      <td mat-cell *matCellDef="let element">
+        <button
+          mat-button
+          color="primary"
+          [routerLink]="[element.idCarrera, 'editar']">
+          <mat-icon>border_color</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="delete">
+      <th mat-header-cell *matHeaderCellDef>Eliminar</th>
+      <td mat-cell *matCellDef="let element">
+        <button mat-button color="primary" (click)="delete(element.idCarrera)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
+</div>

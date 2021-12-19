@@ -1,9 +1,7 @@
 export class Carrera{
-    idCarrera:number;
-    nombreCarrera:string;
-    perfil:string;
-    descripcionDecarrera:string;
-    tasaDeEmpleabilidad:string;
-    salariopromedio:string;
-    respuestas:string;
+  idCarrera: number;
+  nombreCarrera: string;
+  descripcionDeCarrera: string;
+  tasaDeEmpleabilidad: number;
+  salarioPromedio: number
 }
