@@ -15,5 +15,7 @@ private controller:string='/universidades'
  getAllUniversidad(){
     return this.http.get<Universidad[]>(`${this.apiBase}${this.controller}`);
   }
+
+  
   
 }

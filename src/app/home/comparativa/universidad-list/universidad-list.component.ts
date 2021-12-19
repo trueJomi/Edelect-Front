@@ -3,13 +3,14 @@ import { Universidad } from '../shared/universidad.model';
 import {UniversidadService} from "../shared/universidad.service";
 import { MatTableDataSource } from '@angular/material/table';
 
+
 @Component({
   selector: 'app-universidad-list',
   templateUrl: './universidad-list.component.html',
   styleUrls: ['./universidad-list.component.css']
 })
 export class UniversidadListComponent implements OnInit {
-  displayedColumns: string[] = ['id', 'description','name','tipogestion','sede'];
+  displayedColumns: string[] = ['id','name', 'description','tipogestion','sede'];
   dataSource: MatTableDataSource<Universidad>;
 
   constructor(private universidadService:UniversidadService) { }
