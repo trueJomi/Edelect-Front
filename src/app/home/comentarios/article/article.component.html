@@ -1,0 +1,50 @@
+<div class="four wide column center aligned votes">
+    <div class="ui statistic">
+        <div class="value">
+            {{ article.votes }}
+        </div>
+        <div class="label">
+            Points
+        </div>
+    </div>
+</div>
+<div class="twelve wide column">
+    <p class="ui large header">
+        {{ article.contenido}}
+    </p>
+    <div></div>
+    <a class="ui large header">
+        username:
+        {{ article.user.userName}}
+    </a>
+    <div></div>
+    <a class="ui meta">
+        {{ article.universidad.name}}
+    </a>
+    <ul class="ui big horizontal list voters">
+
+    </ul>
+  <button (click)=" deleteArticle()" class="ui positive right floated button">
+        eliminar
+    </button>
+   
+   
+
+    <ul class="ui big horizontal list voters">
+      
+        <li class="item">
+           
+            <a href (click)="voteUp()">
+                <i class="arrow up icon"></i>
+                upvote
+            </a>
+        </li>
+        <li class="item">
+            <a href (click)="voteDown()">
+                <i class="arrow down icon"></i>
+                downvote
+            </a>
+
+        </li>
+    </ul>
+</div>

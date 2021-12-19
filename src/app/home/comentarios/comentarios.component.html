@@ -1,0 +1,19 @@
+<div class="ui main text container">
+
+  <form class=" ui large form segment">
+    <h3 class="ui header">Añadir Comentario </h3>
+    <div class="field">
+      <label for="title">Comentario</label>
+      <input name="title" id="title" #newtitle>
+    </div>
+    <button (click)="createArticle(newtitle)" class="ui positive right floated button">
+      Añadir comentario
+    </button>
+
+  </form>
+  <div class="ui grid posts">
+    <app-article *ngFor="let article of sortArticles()" [article]=article>
+    </app-article>
+
+  </div>
+</div>
