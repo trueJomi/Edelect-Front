@@ -8,7 +8,11 @@ import { ListCarreraComponent } from './carrera/list-carrera/list-carrera.compon
 import { MaterialModule } from '../material/material.module';
 import { SugerenciasUniversityComponent } from './sugerencias-university/sugerencias-university.component';
 import { TestListComponent } from './tests/test-list/test-list.component';
-import { NewTestComponent } from './tests/new-test/new-test.component';
+import { FormTestComponent } from './tests/shared/form-test/form-test.component';
+import { PlantillaComponent } from './tests/plantilla/plantilla.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { FromPlantillaComponent } from './tests/shared/from-plantilla/from-plantilla.component';
+import { ListPlantillaComponent } from './tests/list-plantilla/list-plantilla.component';
 
 
 @NgModule({
@@ -19,13 +23,17 @@ import { NewTestComponent } from './tests/new-test/new-test.component';
     ListCarreraComponent,
     SugerenciasUniversityComponent,
     TestListComponent,
-    NewTestComponent,
+    FormTestComponent,
+    PlantillaComponent,
+    FromPlantillaComponent,
+    ListPlantillaComponent,
    
   ],
   imports: [
     CommonModule,
     AdminRoutingModule,
-    MaterialModule
+    MaterialModule,
+    FontAwesomeModule,
   ]
 })
 export class AdminModule { }

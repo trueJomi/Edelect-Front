@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ComentariosComponent } from './comentarios/comentarios.component';
 import { IndexComponent } from './index/index.component';
+import { InicioComponent } from './inicio/inicio.component';
 import { LayoutComponent } from './layout/layout.component';
-import { SugerenciasUniversityComponent } from './sugerencias-university/sugerencias-university.component';
 import { TestComponent } from './test/test.component';
 
 const routes: Routes = [{
@@ -12,7 +12,7 @@ const routes: Routes = [{
   children:[
     {
       path:'',
-      component: IndexComponent,
+      component: InicioComponent,
     }
   ],
 }
@@ -31,10 +31,6 @@ const routes: Routes = [{
 {
   path:'comentarios',
   component:ComentariosComponent,
-},
-{
-  path:'sugerencias',
-  component:SugerenciasUniversityComponent,
 },
 ];
 

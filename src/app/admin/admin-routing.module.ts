@@ -2,23 +2,27 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LayoutComponent } from './layout/layout.component';
 import { SugerenciasUniversityComponent } from './sugerencias-university/sugerencias-university.component';
-import {NewTestComponent} from "./tests/new-test/new-test.component";
+import { PlantillaComponent } from './tests/plantilla/plantilla.component';
 import {TestListComponent} from "./tests/test-list/test-list.component";
+import { ThisTestComponent } from './tests/this-test/this-test.component';
 
 
 const routes: Routes = [
-
   {
     path: 'test',
     component: LayoutComponent,
     children:[
       {
-        path:'list',
+        path:'',
         component:TestListComponent,
       },
       {
-        path:'new',
-        component:NewTestComponent,
+        path:'plantilla',
+        component:PlantillaComponent,
+      },
+      {
+        path:'test/:id',
+        component:ThisTestComponent,
       },
     ]
   }

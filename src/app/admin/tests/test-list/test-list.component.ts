@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ɵfindLocaleData } from '@angular/core';
 import { Carrera, Test } from '../shared/test.model';
 import {TestService} from "../shared/test.service";
 import { MatTableDataSource } from '@angular/material/table';
@@ -8,9 +8,13 @@ import { MatTableDataSource } from '@angular/material/table';
   templateUrl: './test-list.component.html',
   styleUrls: ['./test-list.component.css']
 })
+
+
+
 export class TestListComponent implements OnInit {
   displayedColumns: string[] = ['id', 'description','fecha','usuario','acciones'];
   dataSource: MatTableDataSource<Test>;
+
 
   constructor(private testService:TestService) { }
 
@@ -20,14 +24,13 @@ export class TestListComponent implements OnInit {
   }
 
   getAllTest(){
-    this.testService.getAllTest().subscribe((data:any)=>{
-      this.dataSource = new MatTableDataSource(data);
-      console.log(data)
+    return this.testService.getAllTest().subscribe((data:any)=>{
+      this.dataSource = new MatTableDataSource(data.body);
     });
   }
 
-  applyFilter(value: Event) {
-    const filterValue = (value.target as HTMLInputElement).value;
+  applyFilter(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 
