@@ -1,0 +1,24 @@
+<div class="text-end">
+    <button mat-raised-button color="primary" routerLink="/admin/test/plantilla">
+        Ver todas las plantillas
+    </button>
+</div>
+
+<h1 style="font-size: 40px; margin-bottom: 50px;">Plantilla Actual</h1>
+
+<div class="container-fluid" *ngFor="let pregunta of preguntas; index as i">
+    <span><a class="btn btn-primary tranformate1" 
+            data-bs-toggle="collapse" [href]="'#a'+i" role="button" aria-expanded="false"
+            aria-controls="collapseExample">
+            <button mat-icon-button >
+                <mat-icon>
+                    chevron_right
+                </mat-icon>
+            </button> </a></span>
+    <span class="Pregunta">{{i+1}}.-{{pregunta.contenido}}</span>
+    <div class="collapse" [id]="'a'+i">
+        <div class="card card-body" *ngFor="let resp of pregunta.respuesta">
+            {{resp.contenidoRespuesta}}
+        </div>
+    </div>
+</div>

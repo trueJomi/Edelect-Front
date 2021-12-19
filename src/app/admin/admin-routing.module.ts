@@ -13,26 +13,27 @@ import {EditUniversidadComponent} from "./universidad/edit-universidad/edit-univ
 import {ListSedeComponent} from "./sede/list-sede/list-sede.component";
 import {NewSedeComponent} from "./sede/new-sede/new-sede.component";
 import {EditSedeComponent} from "./sede/edit-sede/edit-sede.component";
-import { LayoutComponent } from './layout/layout.component';
-import { SugerenciasUniversityComponent } from './sugerencias-university/sugerencias-university.component';
-import {NewTestComponent} from "./tests/new-test/new-test.component";
+import { PlantillaComponent } from './tests/plantilla/plantilla.component';
 import {TestListComponent} from "./tests/test-list/test-list.component";
-import { UniversidadModule } from './universidad/universidad.module';
+import { ThisTestComponent } from './tests/this-test/this-test.component';
 
 
 const routes: Routes = [
-
   {
     path: 'test',
     component: LayoutComponent,
     children:[
       {
-        path:'list',
+        path:'',
         component:TestListComponent,
       },
       {
-        path:'new',
-        component:NewTestComponent,
+        path:'plantilla',
+        component:PlantillaComponent,
+      },
+      {
+        path:'test/:id',
+        component:ThisTestComponent,
       },
     ]
   }

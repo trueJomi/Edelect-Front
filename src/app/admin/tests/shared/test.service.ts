@@ -15,26 +15,28 @@ export class TestService {
   getAllTest(){
     return this.http.get<Test[]>(`${this.apiBase}${this.controller}`);
   }
-  crearTestBase(test:Test){
-    return this.http.post<Test>(`${this.apiBase}${this.controller}/base`,test);
-  }
-  BuscarTestByUser(user:string){
+
+  buscarTestByUser(user:string){
     return this.http.get<Test[]>(`${this.apiBase}${this.controller}/user/${user}`);
   }
-  editTestBase(test:Test){
-    return this.http.put<Test>(`${this.apiBase}${this.controller}/base`,test);
-  }
-  BuscarTestById(id:number){
+  buscarTestById(id:number){
     return this.http.get<Test>(`${this.apiBase}${this.controller}/id/${id}`);
   }
-  ObtenerResultados(id:number){
+  desactivarTest(id:number){
+    return this.http.get<Test>(`${this.apiBase}${this.controller}/desactivar/${id}`);
+  }
+
+  obtenerResultados(id:number){
     return this.http.get<string>(`${this.apiBase}${this.controller}/resultados/${id}`);
   }
-  CarrerasRelacionadas(id:number){
+  carrerasRelacionadas(id:number){
     return this.http.get<Carrera[]>(`${this.apiBase}${this.controller}/relacionado/${id}`);
   }
   deleteTest(id:number){
     return this.http.delete(`${this.apiBase}${this.controller}/${id}`);
+  }
+  crearTest(test:Test){
+    return this.http.post<Test>(`${this.apiBase}${this.controller}`,test);
   }
   
 }

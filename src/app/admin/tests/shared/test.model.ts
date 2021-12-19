@@ -3,7 +3,8 @@ import { Usuario } from "src/app/auth/shared/usuario.model";
 export class Test{
   idTest:number;
   description:string;
-  fecha:string;
+  activate:boolean
+  fecha:number[];
   usuario:Usuario;
   preguntas:Pregunta[];
 }
@@ -30,3 +31,9 @@ export class Carrera{
   salarioPromedio:number
 }
 
+
+export class Plantilla{
+  idPlantillas:number
+  activate:boolean
+  preguntas:Pregunta[]
+}
